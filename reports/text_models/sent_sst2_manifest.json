@@ -1,0 +1,22 @@
+{
+  "model": "distilbert-base-uncased-finetuned-sst-2-english",
+  "commit_hash": null,
+  "id2label_from_config": {
+    "0": "negative",
+    "1": "positive"
+  },
+  "dtype": "fp16",
+  "max_length": 128,
+  "batch_size": 128,
+  "splits": [
+    "train",
+    "validation"
+  ],
+  "rows": 329274,
+  "seconds": 609.2,
+  "rows_per_second": 540.5,
+  "torch": "2.9.1+rocm7.2.1",
+  "device": "AMD Radeon(TM) 8060S Graphics",
+  "output": "data\\processed\\sent_sst2.parquet",
+  "input_text": "title + ' ' + text, truncated to max_length tokens"
+}

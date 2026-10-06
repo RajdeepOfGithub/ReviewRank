@@ -1,0 +1,72 @@
+[transformers] You passed `num_labels=1` which is incompatible to the `id2label` map of length `3`.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|##########| 201/201 [00:00<00:00, 38338.11it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: ProsusAI/finbert
+Key               | Status   |                                                                                       
+------------------+----------+---------------------------------------------------------------------------------------
+classifier.weight | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([3, 768]) vs model:torch.Size([1, 768])
+classifier.bias   | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([3]) vs model:torch.Size([1])          
+
+Notes:
+- MISMATCH:	ckpt weights were loaded, but they did not match the original empty weight shapes.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+ProsusAI/finbert: train rows 60000, steps 3750
+<HOME>\rrg\Lib\site-packages\transformers\integrations\sdpa_attention.py:158: UserWarning: Mem Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at C:\b\pytorch\aten\src\ATen\native\transformers\hip\sdp_utils.cpp:361.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+  epoch 1 step 0/1875 loss 0.9298 2s
+  epoch 1 step 200/1875 loss 0.4000 117s
+  epoch 1 step 400/1875 loss 0.3631 276s
+  epoch 1 step 600/1875 loss 0.3849 435s
+  epoch 1 step 800/1875 loss 0.3561 592s
+  epoch 1 step 1000/1875 loss 0.3740 750s
+  epoch 1 step 1200/1875 loss 0.3631 909s
+  epoch 1 step 1400/1875 loss 0.3448 1069s
+  epoch 1 step 1600/1875 loss 0.3532 1227s
+  epoch 1 step 1800/1875 loss 0.3405 1386s
+  epoch 2 step 0/1875 loss 0.3295 1446s
+  epoch 2 step 200/1875 loss 0.3357 1605s
+  epoch 2 step 400/1875 loss 0.3438 1766s
+  epoch 2 step 600/1875 loss 0.3358 1925s
+  epoch 2 step 800/1875 loss 0.3317 2085s
+  epoch 2 step 1000/1875 loss 0.3113 2244s
+  epoch 2 step 1200/1875 loss 0.3208 2405s
+  epoch 2 step 1400/1875 loss 0.3248 2566s
+  epoch 2 step 1600/1875 loss 0.3192 2725s
+  epoch 2 step 1800/1875 loss 0.3255 2886s
+<HOME>\rrg\Lib\site-packages\transformers\integrations\sdpa_attention.py:158: UserWarning: Flash Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at C:\b\pytorch\aten\src\ATen\native\transformers\hip\sdp_utils.cpp:310.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+{
+  "backbone": "ProsusAI/finbert",
+  "commit_hash": null,
+  "task": "regression on log1p(helpful_vote)",
+  "train_rows": 60000,
+  "train_sampling": "random sample of the train split, seed 42",
+  "epochs": 2,
+  "batch_size": 32,
+  "lr": 2e-05,
+  "max_length": 128,
+  "precision": "fp16 autocast + GradScaler",
+  "scheduler": "linear, 6% warmup",
+  "early_stopping": "none (fixed epochs)",
+  "history": [
+    {
+      "epoch": 1,
+      "mean_train_loss": 0.3642419456879298,
+      "elapsed_s": 1445.0
+    },
+    {
+      "epoch": 2,
+      "mean_train_loss": 0.32699447629849115,
+      "elapsed_s": 2945.0
+    }
+  ],
+  "train_seconds": 2945.0,
+  "train_rows_per_second": 40.7,
+  "scored_rows": 40087,
+  "scored_splits": [
+    "validation"
+  ],
+  "score_seconds": 158.1,
+  "torch": "2.9.1+rocm7.2.1",
+  "device": "AMD Radeon(TM) 8060S Graphics",
+  "output": "data\\processed\\ft_finbert_val.parquet"
+}

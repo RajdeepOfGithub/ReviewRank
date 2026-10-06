@@ -1,0 +1,131 @@
+{
+  "exact_key_duplicates_dev": {
+    "keys": 3262,
+    "share_identical_text": 1.0,
+    "share_identical_votes": 1.0,
+    "share_distinct_asin_variants": 0.0
+  },
+  "text_seen_in_train": [
+    {
+      "split": "test",
+      "reviews": 62855,
+      "seen_in_train": 353.0
+    },
+    {
+      "split": "validation",
+      "reviews": 36955,
+      "seen_in_train": 233.0
+    }
+  ],
+  "grade_distribution_dev_all_years": {
+    "g0": 0.700024338137862,
+    "g1": 0.14861678249817464,
+    "g2_4": 0.09862624732956543,
+    "g5plus": 0.0527326320343979
+  },
+  "grade_distribution_dev_2015_plus": {
+    "g0": 0.7158001995839997,
+    "g1": 0.14589169562237744,
+    "g2_4": 0.09179661669051255,
+    "g5plus": 0.046511488103110385
+  },
+  "groups_ge5_with_votes_dev_by_window_year": [
+    {
+      "yr": 2003,
+      "groups_ge5": 1,
+      "share_with_1plus_voted": 1.0,
+      "share_with_2plus_voted": 1.0
+    },
+    {
+      "yr": 2006,
+      "groups_ge5": 1,
+      "share_with_1plus_voted": 1.0,
+      "share_with_2plus_voted": 1.0
+    },
+    {
+      "yr": 2007,
+      "groups_ge5": 4,
+      "share_with_1plus_voted": 1.0,
+      "share_with_2plus_voted": 1.0
+    },
+    {
+      "yr": 2008,
+      "groups_ge5": 9,
+      "share_with_1plus_voted": 1.0,
+      "share_with_2plus_voted": 1.0
+    },
+    {
+      "yr": 2009,
+      "groups_ge5": 11,
+      "share_with_1plus_voted": 1.0,
+      "share_with_2plus_voted": 1.0
+    },
+    {
+      "yr": 2010,
+      "groups_ge5": 37,
+      "share_with_1plus_voted": 1.0,
+      "share_with_2plus_voted": 1.0
+    },
+    {
+      "yr": 2011,
+      "groups_ge5": 59,
+      "share_with_1plus_voted": 0.9830508474576272,
+      "share_with_2plus_voted": 0.9152542372881356
+    },
+    {
+      "yr": 2012,
+      "groups_ge5": 168,
+      "share_with_1plus_voted": 0.9047619047619048,
+      "share_with_2plus_voted": 0.8154761904761905
+    },
+    {
+      "yr": 2013,
+      "groups_ge5": 401,
+      "share_with_1plus_voted": 0.9027431421446384,
+      "share_with_2plus_voted": 0.800498753117207
+    },
+    {
+      "yr": 2014,
+      "groups_ge5": 674,
+      "share_with_1plus_voted": 0.8293768545994066,
+      "share_with_2plus_voted": 0.6839762611275965
+    },
+    {
+      "yr": 2015,
+      "groups_ge5": 1302,
+      "share_with_1plus_voted": 0.8018433179723502,
+      "share_with_2plus_voted": 0.6344086021505376
+    },
+    {
+      "yr": 2016,
+      "groups_ge5": 2095,
+      "share_with_1plus_voted": 0.8429594272076373,
+      "share_with_2plus_voted": 0.6954653937947494
+    },
+    {
+      "yr": 2017,
+      "groups_ge5": 2286,
+      "share_with_1plus_voted": 0.8407699037620298,
+      "share_with_2plus_voted": 0.6951006124234471
+    },
+    {
+      "yr": 2018,
+      "groups_ge5": 2153,
+      "share_with_1plus_voted": 0.8081746400371574,
+      "share_with_2plus_voted": 0.6502554575011612
+    },
+    {
+      "yr": 2019,
+      "groups_ge5": 2493,
+      "share_with_1plus_voted": 0.766546329723225,
+      "share_with_2plus_voted": 0.5984757320497393
+    },
+    {
+      "yr": 2020,
+      "groups_ge5": 3548,
+      "share_with_1plus_voted": 0.7333709131905298,
+      "share_with_2plus_voted": 0.5532694475760992
+    }
+  ],
+  "rows_before_2015_in_train": 37098
+}

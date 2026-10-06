@@ -1,0 +1,23 @@
+{
+  "model": "ProsusAI/finbert",
+  "commit_hash": null,
+  "id2label_from_config": {
+    "0": "positive",
+    "1": "negative",
+    "2": "neutral"
+  },
+  "dtype": "fp16",
+  "max_length": 128,
+  "batch_size": 128,
+  "splits": [
+    "train",
+    "validation"
+  ],
+  "rows": 329274,
+  "seconds": 1172.3,
+  "rows_per_second": 280.9,
+  "torch": "2.9.1+rocm7.2.1",
+  "device": "AMD Radeon(TM) 8060S Graphics",
+  "output": "data\\processed\\sent_finbert.parquet",
+  "input_text": "title + ' ' + text, truncated to max_length tokens"
+}

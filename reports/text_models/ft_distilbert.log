@@ -1,0 +1,80 @@
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|##########| 100/100 [00:00<00:00, 14983.40it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.weight       | MISSING    | 
+classifier.bias         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+distilbert-base-uncased: train rows 60000, steps 3750
+<HOME>\rrg\Lib\site-packages\transformers\integrations\sdpa_attention.py:158: UserWarning: Mem Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at C:\b\pytorch\aten\src\ATen\native\transformers\hip\sdp_utils.cpp:361.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+<HOME>\rrg\Lib\site-packages\torch\optim\lr_scheduler.py:192: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+  epoch 1 step 0/1875 loss 1.2443 4s
+  epoch 1 step 200/1875 loss 0.4006 89s
+  epoch 1 step 400/1875 loss 0.3530 168s
+  epoch 1 step 600/1875 loss 0.3828 245s
+  epoch 1 step 800/1875 loss 0.3539 323s
+  epoch 1 step 1000/1875 loss 0.3713 401s
+  epoch 1 step 1200/1875 loss 0.3590 479s
+  epoch 1 step 1400/1875 loss 0.3471 557s
+  epoch 1 step 1600/1875 loss 0.3505 635s
+  epoch 1 step 1800/1875 loss 0.3393 712s
+  epoch 2 step 0/1875 loss 0.3433 741s
+  epoch 2 step 200/1875 loss 0.3353 820s
+  epoch 2 step 400/1875 loss 0.3417 898s
+  epoch 2 step 600/1875 loss 0.3334 976s
+  epoch 2 step 800/1875 loss 0.3352 1055s
+  epoch 2 step 1000/1875 loss 0.3124 1133s
+  epoch 2 step 1200/1875 loss 0.3204 1212s
+  epoch 2 step 1400/1875 loss 0.3253 1291s
+  epoch 2 step 1600/1875 loss 0.3172 1369s
+  epoch 2 step 1800/1875 loss 0.3235 1448s
+<HOME>\rrg\Lib\site-packages\transformers\integrations\sdpa_attention.py:158: UserWarning: Flash Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at C:\b\pytorch\aten\src\ATen\native\transformers\hip\sdp_utils.cpp:310.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+{
+  "backbone": "distilbert-base-uncased",
+  "commit_hash": null,
+  "task": "regression on log1p(helpful_vote)",
+  "train_rows": 60000,
+  "train_sampling": "random sample of the train split, seed 42",
+  "epochs": 2,
+  "batch_size": 32,
+  "lr": 2e-05,
+  "max_length": 128,
+  "precision": "fp16 autocast + GradScaler",
+  "scheduler": "linear, 6% warmup",
+  "early_stopping": "none (fixed epochs)",
+  "history": [
+    {
+      "epoch": 1,
+      "mean_train_loss": 0.3618675056695938,
+      "elapsed_s": 740.9
+    },
+    {
+      "epoch": 2,
+      "mean_train_loss": 0.3265946159561475,
+      "elapsed_s": 1477.4
+    }
+  ],
+  "train_seconds": 1477.4,
+  "train_rows_per_second": 81.2,
+  "scored_rows": 40087,
+  "scored_splits": [
+    "validation"
+  ],
+  "score_seconds": 78.6,
+  "torch": "2.9.1+rocm7.2.1",
+  "device": "AMD Radeon(TM) 8060S Graphics",
+  "output": "data\\processed\\ft_distilbert_val.parquet"
+}

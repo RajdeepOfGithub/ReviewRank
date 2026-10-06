@@ -1,0 +1,97 @@
+{
+  "run_id": "STAGE4-20260930",
+  "rows_by_split": {
+    "train": 289187,
+    "validation": 40087,
+    "excluded": 36713
+  },
+  "feature_groups": {
+    "length": [
+      "words",
+      "chars",
+      "title_chars",
+      "title_words",
+      "avg_word_len",
+      "sentences",
+      "unique_word_ratio"
+    ],
+    "style": [
+      "exclaims",
+      "questions",
+      "digits",
+      "caps_ratio",
+      "is_empty_text"
+    ],
+    "media_meta": [
+      "image_count",
+      "has_image",
+      "rating",
+      "verified"
+    ],
+    "asof_product": [
+      "prior_reviews",
+      "prior_mean_rating",
+      "rating_minus_prior_mean",
+      "prior_mean_words",
+      "words_vs_prior_mean"
+    ],
+    "calendar": [
+      "month",
+      "hour"
+    ]
+  },
+  "n_features": 23,
+  "missing_percent_train": {
+    "words": 0.0,
+    "chars": 0.0,
+    "title_chars": 0.0,
+    "title_words": 0.0,
+    "avg_word_len": 0.01,
+    "sentences": 0.0,
+    "unique_word_ratio": 0.12,
+    "exclaims": 0.0,
+    "questions": 0.0,
+    "digits": 0.0,
+    "caps_ratio": 0.01,
+    "is_empty_text": 0.0,
+    "image_count": 0.0,
+    "has_image": 0.0,
+    "rating": 0.0,
+    "verified": 0.0,
+    "prior_reviews": 0.0,
+    "prior_mean_rating": 12.07,
+    "rating_minus_prior_mean": 12.07,
+    "prior_mean_words": 12.07,
+    "words_vs_prior_mean": 12.07,
+    "month": 0.0,
+    "hour": 0.0
+  },
+  "spearman_with_votes_train": {
+    "words": 0.31319114715313556,
+    "chars": 0.31552867178419997,
+    "title_chars": 0.17319906421478554,
+    "title_words": 0.16062321364813315,
+    "avg_word_len": -0.033389437658684795,
+    "sentences": 0.2813473064928073,
+    "unique_word_ratio": -0.2812075877093173,
+    "exclaims": 0.055912964631907855,
+    "questions": 0.07299537762584249,
+    "digits": 0.19507253701700758,
+    "caps_ratio": -0.09227892157221222,
+    "is_empty_text": 0.006087395333489693,
+    "image_count": 0.11442342890484959,
+    "has_image": 0.11416972619415917,
+    "rating": -0.06732723562932162,
+    "verified": -0.008357173980164325,
+    "prior_reviews": -0.11078867707508122,
+    "prior_mean_rating": 0.026802338967700297,
+    "rating_minus_prior_mean": -0.08293755028694108,
+    "prior_mean_words": 0.07055693677251484,
+    "words_vs_prior_mean": 0.23225814295843095,
+    "month": 0.0072744264812923155,
+    "hour": 0.0034239103425099554
+  },
+  "features_parquet": "data/processed/features_dev.parquet",
+  "features_parquet_sha256": "d03db6884b6823916ba99b68e16771b1b0e11ac46830cc7530bddd703cb64df2",
+  "clean_parquet_sha256": "8df009a2102fcfe782bdce98fe2e0451259ae6d4961cc0d66188b926f498f6a1"
+}

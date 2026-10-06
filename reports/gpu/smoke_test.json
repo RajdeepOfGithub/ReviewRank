@@ -1,0 +1,66 @@
+{
+  "torch": "2.9.1+rocm7.2.1",
+  "hip": "7.2.53211-158bd99533",
+  "checks": {
+    "1_gpu_visible": {
+      "ok": true,
+      "seconds": 0.04,
+      "device_name": "AMD Radeon(TM) 8060S Graphics",
+      "capability": [
+        11,
+        5
+      ],
+      "total_memory_gb": 37.7
+    },
+    "2_matmul_matches_cpu": {
+      "ok": true,
+      "seconds": 0.81,
+      "max_abs_error": 0.00011444091796875
+    },
+    "3_transformer_backward_step": {
+      "ok": true,
+      "seconds": 3.74,
+      "losses": [
+        1.38,
+        0.3177,
+        0.0553,
+        0.0133,
+        0.0041
+      ],
+      "loss_decreased": true
+    },
+    "4_finbert_forward_backward_and_labels": {
+      "ok": true,
+      "seconds": 15.47,
+      "id2label": {
+        "0": "positive",
+        "1": "negative",
+        "2": "neutral"
+      },
+      "probs": [
+        [
+          0.306,
+          0.011,
+          0.683
+        ],
+        [
+          0.053,
+          0.706,
+          0.241
+        ],
+        [
+          0.038,
+          0.021,
+          0.942
+        ]
+      ],
+      "predicted_labels": [
+        "neutral",
+        "negative",
+        "neutral"
+      ],
+      "n_parameters": 109484547,
+      "backward_loss": 0.4146
+    }
+  }
+}

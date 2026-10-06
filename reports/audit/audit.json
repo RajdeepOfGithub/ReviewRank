@@ -1,0 +1,368 @@
+{
+  "snapshot_date": "2023-09-11",
+  "rows": 494121,
+  "rows_per_year": [
+    {
+      "yr": 2001,
+      "n": 6
+    },
+    {
+      "yr": 2002,
+      "n": 7
+    },
+    {
+      "yr": 2003,
+      "n": 14
+    },
+    {
+      "yr": 2004,
+      "n": 28
+    },
+    {
+      "yr": 2005,
+      "n": 61
+    },
+    {
+      "yr": 2006,
+      "n": 96
+    },
+    {
+      "yr": 2007,
+      "n": 336
+    },
+    {
+      "yr": 2008,
+      "n": 527
+    },
+    {
+      "yr": 2009,
+      "n": 764
+    },
+    {
+      "yr": 2010,
+      "n": 1495
+    },
+    {
+      "yr": 2011,
+      "n": 2148
+    },
+    {
+      "yr": 2012,
+      "n": 4072
+    },
+    {
+      "yr": 2013,
+      "n": 10018
+    },
+    {
+      "yr": 2014,
+      "n": 17526
+    },
+    {
+      "yr": 2015,
+      "n": 34312
+    },
+    {
+      "yr": 2016,
+      "n": 53342
+    },
+    {
+      "yr": 2017,
+      "n": 57689
+    },
+    {
+      "yr": 2018,
+      "n": 52411
+    },
+    {
+      "yr": 2019,
+      "n": 58185
+    },
+    {
+      "yr": 2020,
+      "n": 76753
+    },
+    {
+      "yr": 2021,
+      "n": 69202
+    },
+    {
+      "yr": 2022,
+      "n": 43667
+    },
+    {
+      "yr": 2023,
+      "n": 11462
+    }
+  ],
+  "rows_per_split": [
+    {
+      "split": "stream",
+      "n": 55129
+    },
+    {
+      "split": "test",
+      "n": 69202
+    },
+    {
+      "split": "train",
+      "n": 329241
+    },
+    {
+      "split": "validation",
+      "n": 40549
+    }
+  ],
+  "exact_duplicate_key_user_product_timestamp": {
+    "extra_rows": 5131.0,
+    "keys": 4382
+  },
+  "same_user_same_product_multiple_reviews": {
+    "user_product_pairs": 5082,
+    "rows_involved": 11015.0
+  },
+  "identical_text_across_reviews_min20chars": {
+    "texts_repeated": 5362,
+    "rows_involved": 12970.0,
+    "largest_repeat": 47
+  },
+  "empty_text_rows": 249,
+  "words_percentiles": {
+    "p50": 20.0,
+    "p75": 43.0,
+    "p90": 80.0,
+    "p95": 117.0,
+    "p99": 237.0,
+    "max": 3455,
+    "share_over_100_words": 0.0670706163065322,
+    "share_3_words_or_fewer": 0.10284323070664877
+  },
+  "mostly_non_ascii_text_share": 0.0008642080251935867,
+  "reviews_per_product": {
+    "products": 60274,
+    "p50": 2.0,
+    "p75": 5.0,
+    "p90": 14.0,
+    "p99": 97.0,
+    "max": 3192,
+    "products_ge5": 16956.0,
+    "products_ge10": 8734.0,
+    "products_ge20": 4199.0,
+    "products_ge50": 1414.0
+  },
+  "share_of_reviews_in_top_1pct_products": 0.33695592779906136,
+  "test_period_reviews_by_users_seen_in_train": [
+    {
+      "split": "test",
+      "reviews": 69202,
+      "by_train_users": 3307.0
+    },
+    {
+      "split": "validation",
+      "reviews": 40549,
+      "by_train_users": 2152.0
+    }
+  ],
+  "group_sizes_by_window_and_split_counts_only": {
+    "month": [
+      {
+        "split": "stream",
+        "reviews": 55129,
+        "groups": 27863,
+        "groups_ge2": 9018.0,
+        "groups_ge3": 4712.0,
+        "groups_ge5": 2070.0,
+        "groups_ge10": 584.0,
+        "review_share_in_ge2": 0.6581653938943206,
+        "review_share_in_ge5": 0.3415987955522502,
+        "review_share_in_ge10": 0.17040033376262947
+      },
+      {
+        "split": "test",
+        "reviews": 69202,
+        "groups": 35646,
+        "groups_ge2": 10972.0,
+        "groups_ge3": 5592.0,
+        "groups_ge5": 2307.0,
+        "groups_ge10": 669.0,
+        "review_share_in_ge2": 0.6434496112829109,
+        "review_share_in_ge5": 0.3294846969740759,
+        "review_share_in_ge10": 0.17996589693939483
+      },
+      {
+        "split": "train",
+        "reviews": 329241,
+        "groups": 164345,
+        "groups_ge2": 48878.0,
+        "groups_ge3": 25077.0,
+        "groups_ge5": 10891.0,
+        "groups_ge10": 3681.0,
+        "review_share_in_ge2": 0.6492933747619525,
+        "review_share_in_ge5": 0.3607964986134777,
+        "review_share_in_ge10": 0.2220531464793267
+      },
+      {
+        "split": "validation",
+        "reviews": 40549,
+        "groups": 19823,
+        "groups_ge2": 6674.0,
+        "groups_ge3": 3484.0,
+        "groups_ge5": 1475.0,
+        "groups_ge10": 404.0,
+        "review_share_in_ge2": 0.6757256652445189,
+        "review_share_in_ge5": 0.3529803447680584,
+        "review_share_in_ge10": 0.18656440356112358
+      }
+    ],
+    "quarter": [
+      {
+        "split": "stream",
+        "reviews": 55129,
+        "groups": 19695,
+        "groups_ge2": 7894.0,
+        "groups_ge3": 4735.0,
+        "groups_ge5": 2487.0,
+        "groups_ge10": 995.0,
+        "review_share_in_ge2": 0.7859384353062816,
+        "review_share_in_ge5": 0.5340746249705237,
+        "review_share_in_ge10": 0.35993760089970794
+      },
+      {
+        "split": "test",
+        "reviews": 69202,
+        "groups": 25073,
+        "groups_ge2": 10152.0,
+        "groups_ge3": 6012.0,
+        "groups_ge5": 2937.0,
+        "groups_ge10": 1049.0,
+        "review_share_in_ge2": 0.7843848443686599,
+        "review_share_in_ge5": 0.5159099447992832,
+        "review_share_in_ge10": 0.3413918672870726
+      },
+      {
+        "split": "train",
+        "reviews": 329241,
+        "groups": 116828,
+        "groups_ge2": 44605.0,
+        "groups_ge3": 25954.0,
+        "groups_ge5": 13117.0,
+        "groups_ge10": 5029.0,
+        "review_share_in_ge2": 0.7806378913926273,
+        "review_share_in_ge5": 0.5365613638641603,
+        "review_share_in_ge10": 0.37988585868710156
+      },
+      {
+        "split": "validation",
+        "reviews": 40549,
+        "groups": 13782,
+        "groups_ge2": 5942.0,
+        "groups_ge3": 3664.0,
+        "groups_ge5": 1870.0,
+        "groups_ge10": 648.0,
+        "review_share_in_ge2": 0.8066536782658019,
+        "review_share_in_ge5": 0.5456854669658932,
+        "review_share_in_ge10": 0.3515992996128141
+      }
+    ],
+    "half_year": [
+      {
+        "split": "stream",
+        "reviews": 55129,
+        "groups": 15701,
+        "groups_ge2": 6977.0,
+        "groups_ge3": 4475.0,
+        "groups_ge5": 2511.0,
+        "groups_ge10": 1128.0,
+        "review_share_in_ge2": 0.8417529793756462,
+        "review_share_in_ge5": 0.6307569518765078,
+        "review_share_in_ge10": 0.4706597253714016
+      },
+      {
+        "split": "test",
+        "reviews": 69202,
+        "groups": 19850,
+        "groups_ge2": 8965.0,
+        "groups_ge3": 5671.0,
+        "groups_ge5": 3070.0,
+        "groups_ge10": 1260.0,
+        "review_share_in_ge2": 0.8427068581832895,
+        "review_share_in_ge5": 0.6207190543625907,
+        "review_share_in_ge10": 0.4541342735759082
+      },
+      {
+        "split": "train",
+        "reviews": 329241,
+        "groups": 92033,
+        "groups_ge2": 39823.0,
+        "groups_ge3": 24607.0,
+        "groups_ge5": 13328.0,
+        "groups_ge10": 5688.0,
+        "review_share_in_ge2": 0.8414231520375652,
+        "review_share_in_ge5": 0.6336422256037371,
+        "review_share_in_ge10": 0.48429873557667485
+      },
+      {
+        "split": "validation",
+        "reviews": 40549,
+        "groups": 10764,
+        "groups_ge2": 5259.0,
+        "groups_ge3": 3439.0,
+        "groups_ge5": 1914.0,
+        "groups_ge10": 744.0,
+        "review_share_in_ge2": 0.8642383289353621,
+        "review_share_in_ge5": 0.6472909319588646,
+        "review_share_in_ge10": 0.4585563145823571
+      }
+    ],
+    "year": [
+      {
+        "split": "stream",
+        "reviews": 55129,
+        "groups": 12946,
+        "groups_ge2": 6226.0,
+        "groups_ge3": 4083.0,
+        "groups_ge5": 2393.0,
+        "groups_ge10": 1151.0,
+        "review_share_in_ge2": 0.878104083150429,
+        "review_share_in_ge5": 0.6962578679098115,
+        "review_share_in_ge10": 0.551687859384353
+      },
+      {
+        "split": "test",
+        "reviews": 69202,
+        "groups": 15784,
+        "groups_ge2": 7924.0,
+        "groups_ge3": 5286.0,
+        "groups_ge5": 2987.0,
+        "groups_ge10": 1309.0,
+        "review_share_in_ge2": 0.8864194676454438,
+        "review_share_in_ge5": 0.6977110488136181,
+        "review_share_in_ge10": 0.5430623392387504
+      },
+      {
+        "split": "train",
+        "reviews": 329241,
+        "groups": 74255,
+        "groups_ge2": 35271.0,
+        "groups_ge3": 22919.0,
+        "groups_ge5": 13052.0,
+        "groups_ge10": 5953.0,
+        "review_share_in_ge2": 0.881594333634025,
+        "review_share_in_ge5": 0.7056077463013416,
+        "review_share_in_ge10": 0.5670223331845062
+      },
+      {
+        "split": "validation",
+        "reviews": 40549,
+        "groups": 10764,
+        "groups_ge2": 5259.0,
+        "groups_ge3": 3439.0,
+        "groups_ge5": 1914.0,
+        "groups_ge10": 744.0,
+        "review_share_in_ge2": 0.8642383289353621,
+        "review_share_in_ge5": 0.6472909319588646,
+        "review_share_in_ge10": 0.4585563145823571
+      }
+    ]
+  }
+}

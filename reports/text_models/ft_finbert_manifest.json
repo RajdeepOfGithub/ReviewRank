@@ -1,0 +1,36 @@
+{
+  "backbone": "ProsusAI/finbert",
+  "commit_hash": null,
+  "task": "regression on log1p(helpful_vote)",
+  "train_rows": 60000,
+  "train_sampling": "random sample of the train split, seed 42",
+  "epochs": 2,
+  "batch_size": 32,
+  "lr": 2e-05,
+  "max_length": 128,
+  "precision": "fp16 autocast + GradScaler",
+  "scheduler": "linear, 6% warmup",
+  "early_stopping": "none (fixed epochs)",
+  "history": [
+    {
+      "epoch": 1,
+      "mean_train_loss": 0.3642419456879298,
+      "elapsed_s": 1445.0
+    },
+    {
+      "epoch": 2,
+      "mean_train_loss": 0.32699447629849115,
+      "elapsed_s": 2945.0
+    }
+  ],
+  "train_seconds": 2945.0,
+  "train_rows_per_second": 40.7,
+  "scored_rows": 40087,
+  "scored_splits": [
+    "validation"
+  ],
+  "score_seconds": 158.1,
+  "torch": "2.9.1+rocm7.2.1",
+  "device": "AMD Radeon(TM) 8060S Graphics",
+  "output": "data\\processed\\ft_finbert_val.parquet"
+}

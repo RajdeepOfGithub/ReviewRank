@@ -1,0 +1,150 @@
+{
+  "run_id": "EXP-20260930-T02",
+  "split_evaluated": "validation; sealed test NOT loaded",
+  "groups_evaluated": 1373,
+  "summary_ndcg_at_3": {
+    "longest_first": {
+      "mean": 0.599089597554465,
+      "ci_lower": 0.5818942839619347,
+      "ci_upper": 0.6171613473250297,
+      "n_groups": 1373,
+      "n_clusters": 1373,
+      "replicates": 2000,
+      "ci_level": 0.95
+    },
+    "primary_content_only": {
+      "mean": 0.6570662736384393,
+      "ci_lower": 0.6402891782708717,
+      "ci_upper": 0.6736044404528428,
+      "n_groups": 1373,
+      "n_clusters": 1373,
+      "replicates": 2000,
+      "ci_level": 0.95
+    },
+    "distilbert_standalone": {
+      "mean": 0.5816057586179056,
+      "ci_lower": 0.5635178603904253,
+      "ci_upper": 0.599235389092268,
+      "n_groups": 1373,
+      "n_clusters": 1373,
+      "replicates": 2000,
+      "ci_level": 0.95
+    },
+    "finbert_standalone": {
+      "mean": 0.5840229002499576,
+      "ci_lower": 0.5668451304879376,
+      "ci_upper": 0.6018837023689882,
+      "n_groups": 1373,
+      "n_clusters": 1373,
+      "replicates": 2000,
+      "ci_level": 0.95
+    },
+    "blend_distilbert_crossfit": {
+      "mean": 0.6584143778182056,
+      "ci_lower": 0.6419433694057731,
+      "ci_upper": 0.6746604098024678,
+      "n_groups": 1373,
+      "n_clusters": 1373,
+      "replicates": 2000,
+      "ci_level": 0.95
+    },
+    "blend_finbert_crossfit": {
+      "mean": 0.659387771242937,
+      "ci_lower": 0.6428577031752513,
+      "ci_upper": 0.6755850088552413,
+      "n_groups": 1373,
+      "n_clusters": 1373,
+      "replicates": 2000,
+      "ci_level": 0.95
+    }
+  },
+  "paired_vs_primary_ndcg_at_3": {
+    "longest_first": {
+      "ci_lower": -0.0708710206061719,
+      "ci_upper": -0.04512289253927929,
+      "n_groups": 1373,
+      "n_clusters": 1373,
+      "replicates": 2000,
+      "ci_level": 0.95,
+      "mean_diff": -0.057976676083974214
+    },
+    "distilbert_standalone": {
+      "ci_lower": -0.09034129778530003,
+      "ci_upper": -0.06077724079344735,
+      "n_groups": 1373,
+      "n_clusters": 1373,
+      "replicates": 2000,
+      "ci_level": 0.95,
+      "mean_diff": -0.07546051502053362
+    },
+    "finbert_standalone": {
+      "ci_lower": -0.08836151296295511,
+      "ci_upper": -0.057378015666681575,
+      "n_groups": 1373,
+      "n_clusters": 1373,
+      "replicates": 2000,
+      "ci_level": 0.95,
+      "mean_diff": -0.07304337338848164
+    },
+    "blend_distilbert_crossfit": {
+      "ci_lower": -0.0031678714036768164,
+      "ci_upper": 0.005748238431835581,
+      "n_groups": 1373,
+      "n_clusters": 1373,
+      "replicates": 2000,
+      "ci_level": 0.95,
+      "mean_diff": 0.001348104179766347
+    },
+    "blend_finbert_crossfit": {
+      "ci_lower": -0.0021551548046793365,
+      "ci_upper": 0.006794215200900398,
+      "n_groups": 1373,
+      "n_clusters": 1373,
+      "replicates": 2000,
+      "ci_level": 0.95,
+      "mean_diff": 0.002321497604497776
+    }
+  },
+  "verdict_for_blends": {
+    "blend_distilbert_crossfit": "reject (CI lower bound not above 0)",
+    "blend_finbert_crossfit": "reject (CI lower bound not above 0)"
+  },
+  "blend_info": {
+    "distilbert": {
+      "weights_chosen_per_fold": {
+        "0": 0.1,
+        "1": 0.1
+      },
+      "ndcg_by_weight_full_validation": {
+        "0.1": 0.6584143778182056,
+        "0.2": 0.6550565208488419,
+        "0.3": 0.6489128997246156,
+        "0.4": 0.6460714868961008,
+        "0.5": 0.6398120702689815,
+        "0.6": 0.6312235709376238,
+        "0.7": 0.6191216769418464,
+        "0.8": 0.6095760456282835,
+        "0.9": 0.5965071786956512
+      }
+    },
+    "finbert": {
+      "weights_chosen_per_fold": {
+        "0": 0.1,
+        "1": 0.1
+      },
+      "ndcg_by_weight_full_validation": {
+        "0.1": 0.659387771242937,
+        "0.2": 0.6565410791069296,
+        "0.3": 0.6561467415974123,
+        "0.4": 0.6504136102301432,
+        "0.5": 0.6421847218347956,
+        "0.6": 0.6326882464734541,
+        "0.7": 0.6236356962905888,
+        "0.8": 0.6076281219102193,
+        "0.9": 0.5976898874922898
+      }
+    }
+  },
+  "blend_weight_selection": "2-fold cross-fitting over validation products",
+  "git_commit": "none (repository has no commits yet at time of run)"
+}

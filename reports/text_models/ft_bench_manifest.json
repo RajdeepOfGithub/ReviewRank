@@ -1,0 +1,31 @@
+{
+  "backbone": "distilbert-base-uncased",
+  "commit_hash": null,
+  "task": "regression on log1p(helpful_vote)",
+  "train_rows": 3200,
+  "train_sampling": "random sample of the train split, seed 42",
+  "epochs": 1,
+  "batch_size": 32,
+  "lr": 2e-05,
+  "max_length": 128,
+  "precision": "fp16 autocast + GradScaler",
+  "scheduler": "linear, 6% warmup",
+  "early_stopping": "none (fixed epochs)",
+  "history": [
+    {
+      "epoch": 1,
+      "mean_train_loss": 0.3773884803056717,
+      "elapsed_s": 49.5
+    }
+  ],
+  "train_seconds": 49.5,
+  "train_rows_per_second": 64.6,
+  "scored_rows": 40087,
+  "scored_splits": [
+    "validation"
+  ],
+  "score_seconds": 94.4,
+  "torch": "2.9.1+rocm7.2.1",
+  "device": "AMD Radeon(TM) 8060S Graphics",
+  "output": "data\\processed\\ft_bench_val.parquet"
+}

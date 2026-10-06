@@ -1,0 +1,30 @@
+[transformers] You passed `num_labels=1` which is incompatible to the `id2label` map of length `3`.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|##########| 201/201 [00:00<00:00, 20201.16it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: ProsusAI/finbert
+Key               | Status   |                                                                                       
+------------------+----------+---------------------------------------------------------------------------------------
+classifier.bias   | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([3]) vs model:torch.Size([1])          
+classifier.weight | MISMATCH | Reinit due to size mismatch - ckpt: torch.Size([3, 768]) vs model:torch.Size([1, 768])
+
+Notes:
+- MISMATCH:	ckpt weights were loaded, but they did not match the original empty weight shapes.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+ProsusAI/finbert: train rows 60000, steps 3750
+<HOME>\rrg\Lib\site-packages\transformers\integrations\sdpa_attention.py:158: UserWarning: Mem Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at C:\b\pytorch\aten\src\ATen\native\transformers\hip\sdp_utils.cpp:361.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+  epoch 1 step 0/1875 loss 0.9298 4s
+  epoch 1 step 200/1875 loss 0.4000 165s
+  epoch 1 step 400/1875 loss 0.3631 325s
+  epoch 1 step 600/1875 loss 0.3849 483s
+  epoch 1 step 800/1875 loss 0.3561 642s
+  epoch 1 step 1000/1875 loss 0.3740 800s
+  epoch 1 step 1200/1875 loss 0.3631 958s
+  epoch 1 step 1400/1875 loss 0.3448 1117s
+  epoch 1 step 1600/1875 loss 0.3532 1274s
+  epoch 1 step 1800/1875 loss 0.3405 1430s
+  epoch 2 step 0/1875 loss 0.3295 1490s
+  epoch 2 step 200/1875 loss 0.3357 1648s
+  epoch 2 step 400/1875 loss 0.3438 1806s
+  epoch 2 step 600/1875 loss 0.3358 1966s
+  epoch 2 step 800/1875 loss 0.3317 2126s
+  epoch 2 step 1000/1875 loss 0.3113 2292s
