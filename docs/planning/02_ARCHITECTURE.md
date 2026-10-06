@@ -71,7 +71,7 @@ tests/{test_split,test_labels,test_leakage,test_ndcg,test_bootstrap,test_api_par
 - **Python 3.11**, **DuckDB + Parquet** for the 494k-row category (and any larger one), pandas only where bounded.
 - **scikit-learn** (TF-IDF, linear models), **LightGBM** (LambdaRank), **Hugging Face Transformers + PyTorch** (FinBERT, general encoder, fine-tuning), **scipy/numpy** for bootstrap.
 - **FastAPI + Docker** for serving; **pytest** for tests; YAML configs and run manifests tie every number to code, data hash and parameters.
-- **AWS (free tier only, verify terms first):** S3 for model artifact, Lambda container image or equivalent for the API, CloudWatch logs, an AWS Budgets alarm. "Deployed on AWS" on the resume only after it is live and verified.
+- **AWS (free tier only, verify terms first):** S3 for model artifact, Lambda container image or equivalent for the API, CloudWatch logs, an AWS Budgets alarm. Describe the project as deployed on AWS only after it is live and verified.
 - Hardware: Windows; GPU not yet checked.
 
 ## Evaluation design

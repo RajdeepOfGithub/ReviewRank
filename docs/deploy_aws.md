@@ -1,6 +1,6 @@
 # Deploying ReviewRank on AWS (free-tier-minded runbook)
 
-**Status: NOT deployed.** The AWS CLI on the development machine has no credentials configured, the Docker image has not been built (Docker Desktop was not running), and the model is a candidate until the Stage 7 freeze. Put "deployed on AWS" on a resume only after the steps below are done and the live URL has been checked.
+**Status: NOT deployed.** The AWS CLI on the development machine has no credentials configured, the Docker image has not been built (Docker Desktop was not running), and the model is a candidate until the Stage 7 freeze. Describe the project as deployed on AWS only after the steps below are done and the live URL has been checked.
 
 ## What AWS says (read from official pages on 2026-09-30)
 
