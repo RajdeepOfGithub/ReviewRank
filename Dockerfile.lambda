@@ -1,0 +1,28 @@
+# ReviewRank scoring service packaged for AWS Lambda (container image) with the AWS Lambda Web Adapter.
+# Build from the repository root:  docker build -f Dockerfile.lambda -t reviewrank:lambda .
+# Adapter usage verified at https://github.com/awslabs/aws-lambda-web-adapter (2026-09-30).
+FROM python:3.12-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# The adapter turns Lambda invocation events into HTTP requests to the app below.
+COPY --from=public.ecr.aws/awsguru/aws-lambda-adapter:1.1.0 /lambda-adapter /opt/extensions/lambda-adapter
+
+WORKDIR /app
+COPY requirements-serve.txt .
+RUN pip install --no-cache-dir -r requirements-serve.txt
+
+COPY pyproject.toml ./
+COPY src ./src
+RUN pip install --no-cache-dir --no-deps .
+
+COPY artifacts/models/lgbm_primary.txt artifacts/models/lgbm_primary.txt
+COPY artifacts/manifests/primary_model.json artifacts/manifests/primary_model.json
+
+ENV AWS_LWA_PORT=8080 \
+    REVIEWRANK_MODEL=/app/artifacts/models/lgbm_primary.txt \
+    REVIEWRANK_MANIFEST=/app/artifacts/manifests/primary_model.json
+
+CMD ["uvicorn", "reviewrank.serve:app_from_env", "--factory", "--host", "0.0.0.0", "--port", "8080"]

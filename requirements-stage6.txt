@@ -1,0 +1,18 @@
+# Stage 6 (text models) only. Optional: the final ranker and the reported test result do not use these.
+# Install into a SEPARATE environment at a short path (the ROCm SDK files exceed the Windows long-path limit).
+#
+# Versions are copied from what the runs recorded (reports/gpu/smoke_test.json and reports/text_models/*_manifest.json).
+# A version that was not recorded is written as UNKNOWN; it was not guessed.
+#
+# torch: 2.9.1+rocm7.2.1   (AMD ROCm 7.2.1 wheel for Windows, recorded in every Stage 6 manifest;
+#                           HIP 7.2.53211-158bd99533 per reports/gpu/smoke_test.json. It is NOT on the default PyPI index:
+#                           install it from AMD's ROCm wheel index for your platform.)
+# transformers: UNKNOWN    (imported by the Stage 6 scripts; its version was not recorded in any manifest)
+# Other packages pulled in by transformers (tokenizers, safetensors, huggingface_hub): UNKNOWN
+#
+# Models downloaded from Hugging Face at run time (snapshot hashes appear in the hf_cache/ folder names, git-ignored):
+#   distilbert-base-uncased, ProsusAI/finbert, distilbert-base-uncased-finetuned-sst-2-english
+#
+# Also needed in that environment: the project itself (pip install -e . --no-deps) and the packages in requirements.lock.
+torch==2.9.1+rocm7.2.1
+# transformers==UNKNOWN

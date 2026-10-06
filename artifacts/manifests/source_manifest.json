@@ -1,0 +1,39 @@
+{
+  "category": "Health_and_Personal_Care",
+  "dataset": "Amazon Reviews 2023 (McAuley Lab)",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10"
+  },
+  "git_commit": "none (repository has no commits yet at time of run)",
+  "hf_repo": "McAuley-Lab/Amazon-Reviews-2023",
+  "hf_revision": "2b6d039ed471f2ba5fd2acb718bf33b0a7e5598e",
+  "license": {
+    "citation": "Hou et al., Bridging Language and Items for Retrieval and Recommendation, arXiv:2403.03952 (2024)",
+    "dataset_license_assigned": false,
+    "note": "No dataset license is stated on the project site, the Hugging Face card or its API metadata. The MIT license in the GitHub repo covers code, not data. Maintainers state they cannot assign a license and that academic, non-commercial use is permitted (HF discussion #1). Use: non-commercial portfolio/research; cite; do not redistribute raw data or review text.",
+    "verified_on": "2026-09-30"
+  },
+  "manifest_written_utc": "2026-09-30T21:53:31Z",
+  "parquet_bytes": 55615024,
+  "parquet_columns": {
+    "asin": "VARCHAR",
+    "helpful_vote": "BIGINT",
+    "images_json": "VARCHAR",
+    "parent_asin": "VARCHAR",
+    "rating": "DOUBLE",
+    "text": "VARCHAR",
+    "timestamp_ms": "BIGINT",
+    "title": "VARCHAR",
+    "user_id": "VARCHAR",
+    "verified_purchase": "BOOLEAN"
+  },
+  "parquet_sha256": "8cf635113b8a539a9a62ec33c93dc72d7e81620f72c32aeb6564ecadcc4b1cac",
+  "raw_bytes": 226990293,
+  "raw_sha256": "b532849dcf8e42910ce688ad423b3c1622ce860e7bf88a3641358bb89f345d02",
+  "raw_sha256_source": "Hugging Face LFS metadata; recomputed locally and matched",
+  "retrieval": "2026-09-30T21:53:27Z",
+  "rows": 494121,
+  "snapshot_note": "Source states data spans May 1996 to Sep 2023; snapshot year 2023.",
+  "url": "https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023/resolve/2b6d039ed471f2ba5fd2acb718bf33b0a7e5598e/raw/review_categories/Health_and_Personal_Care.jsonl"
+}

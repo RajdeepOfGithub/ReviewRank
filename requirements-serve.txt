@@ -1,0 +1,6 @@
+# Minimal runtime dependencies for the serving image (training, EDA and notebooks need more; see pyproject.toml).
+numpy
+pandas
+lightgbm
+fastapi
+uvicorn

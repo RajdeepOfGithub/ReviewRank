@@ -1,0 +1,29 @@
+{
+  "counts": {
+    "exact_duplicates_removed": 5131,
+    "rows_in": 494121,
+    "rows_out": 488990,
+    "rows_per_split": {
+      "excluded": 36713,
+      "stream": 54540,
+      "test": 68463,
+      "train": 289187,
+      "validation": 40087
+    },
+    "text_seen_in_train_per_split": {
+      "test": 344,
+      "validation": 229
+    }
+  },
+  "input": "data/processed/reviews.parquet",
+  "input_sha256": "8cf635113b8a539a9a62ec33c93dc72d7e81620f72c32aeb6564ecadcc4b1cac",
+  "output": "data/processed/reviews_clean.parquet",
+  "output_sha256": "8df009a2102fcfe782bdce98fe2e0451259ae6d4961cc0d66188b926f498f6a1",
+  "split_config": {
+    "status": "provisional",
+    "test_end": "2022-01-01",
+    "train_end": "2020-07-01",
+    "train_start": "2015-01-01",
+    "validation_end": "2021-01-01"
+  }
+}

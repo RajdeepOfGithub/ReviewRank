@@ -1,0 +1,35 @@
+{
+  "feature_columns": [
+    "words",
+    "chars",
+    "title_chars",
+    "title_words",
+    "avg_word_len",
+    "sentences",
+    "unique_word_ratio",
+    "exclaims",
+    "questions",
+    "digits",
+    "caps_ratio",
+    "is_empty_text",
+    "image_count",
+    "has_image",
+    "rating",
+    "verified",
+    "prior_mean_rating",
+    "rating_minus_prior_mean",
+    "prior_mean_words",
+    "words_vs_prior_mean"
+  ],
+  "lightgbm_params": {
+    "best_iteration": 214,
+    "min_data_in_leaf": 200,
+    "num_leaves": 31
+  },
+  "model_file": "artifacts/models/lgbm_primary.txt (git-ignored)",
+  "primary": "content_only",
+  "run_id": "EXP-20260930-R02",
+  "status": "candidate on validation only; not frozen (Stage 7)",
+  "tfidf_alpha": 30.0,
+  "uses_tfidf_score": false
+}
