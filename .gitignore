@@ -1,0 +1,58 @@
+# --- environments ---
+.venv/
+.venv-gpu/
+venv/
+env/
+
+# --- secrets and local config ---
+.env
+.env.*
+*.pem
+*.key
+
+# --- raw and processed data (never commit raw data or review text) ---
+data/raw/
+data/processed/
+*.jsonl
+*.jsonl.gz
+*.csv
+*.csv.gz
+*.parquet
+*.duckdb
+*.duckdb.wal
+*.db
+*.sqlite
+
+# --- model artifacts and cached features/embeddings (too big or regenerable) ---
+hf_cache/
+artifacts/models/*
+!artifacts/models/lgbm_primary.txt
+artifacts/predictions/
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.bin
+*.ckpt
+*.joblib
+*.pkl
+*.npy
+*.npz
+
+# --- caches and build output ---
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+
+# --- editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

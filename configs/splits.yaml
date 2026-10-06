@@ -1,0 +1,16 @@
+# Temporal split. All boundaries are UTC and half-open: [start, end).
+# status: provisional. Boundaries were chosen from feasibility counts only
+# (rows per year), NOT from the real vote-age curve. Stage 2 confirms or changes them
+# and records an ADR. After that they are frozen before the first model run.
+status: provisional
+freeze_before: stage_3_first_model
+timezone: UTC
+
+# Reviews posted before train_end are train. null = no lower bound.
+train_start: "2015-01-01"      # ADR-010 (Stage 2): pre-2015 reviews behave differently; 37,098 rows set aside
+train_end: "2020-07-01"        # train:      t <  2020-07-01
+validation_end: "2021-01-01"   # validation: 2020-07-01 <= t < 2021-01-01
+test_end: "2022-01-01"         # test:       2021-01-01 <= t < 2022-01-01 (sealed)
+# stream: t >= 2022-01-01. Unlabeled; used only for drift replay, never for accuracy claims.
+
+sealed_test_rule: "Open once, after the freeze record in docs/planning/03_METRICS_AND_DECISIONS.md."

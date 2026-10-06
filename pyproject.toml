@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reviewrank"
+version = "0.0.1"
+description = "Cold-start ranking of Amazon product reviews by eventual helpfulness (temporal backtest)"
+requires-python = ">=3.11"
+# Stage 0 needs only these. Modeling, serving and NLP dependencies are added and
+# locked at the stage that first needs them (see docs/planning/01_ROADMAP.md).
+dependencies = [
+    "numpy",
+    "pandas",
+    "pyyaml",
+    "duckdb",
+    "pyarrow",
+    "matplotlib",
+    "scikit-learn",
+    "lightgbm",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+serve = ["fastapi", "uvicorn", "httpx"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

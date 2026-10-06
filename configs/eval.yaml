@@ -1,0 +1,42 @@
+# Evaluation contract. status: provisional until the Stage 2 label-design ADR.
+status: provisional
+
+metric:
+  primary: ndcg_at_3
+  also_report: [ndcg_at_5, precision_at_3]
+  gain: exponential            # gain = 2**rel - 1
+  discount: log2(position + 1) # position is 1-based
+  undefined_group: exclude_and_report_coverage   # ideal DCG == 0 -> NDCG undefined
+
+query_group:
+  key: parent_asin
+  window: half_year            # ADR-011: calendar halves (Jan-Jun, Jul-Dec)
+  min_group_size: 5            # primary; sensitivity at 3 and 10, and quarter windows
+  require_voted_review: 1      # NDCG undefined without one; coverage is reported
+
+label:
+  source_field: helpful_vote   # used ONLY to build relevance; never a feature
+  relevance: absolute_vote_bins  # ADR-012
+  bins:                        # votes -> relevance grade
+    0: 0
+    1: 1
+    2_to_4: 2
+    5_plus: 3
+  sensitivity: [binary_ge1_vote, require_two_voted_reviews]
+  maturity_months: 18          # ADR-013: review must be at least this old at snapshot
+  snapshot_date: "2023-09-11"
+
+ties:
+  rule: seeded_random_permutation
+  seed: 42
+
+uncertainty:
+  method: product_clustered_bootstrap
+  cluster: parent_asin
+  replicates: 2000
+  ci_level: 0.95
+  paired_vs_baselines: true
+  seed: 42
+
+baselines: [random_seeded, newest_first, longest_first, lowest_rating_first, tfidf_ridge]  # ADR-016
+primary_comparator: longest_first   # Stage 3: best baseline on validation

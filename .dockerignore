@@ -1,0 +1,14 @@
+.venv/
+.venv-gpu/
+.git/
+data/
+hf_cache/
+reports/
+tests/
+docs/
+scripts/
+__pycache__/
+*.pyc
+.pytest_cache/
+artifacts/models/*
+!artifacts/models/lgbm_primary.txt

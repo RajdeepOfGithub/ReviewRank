@@ -1,0 +1,20 @@
+# ReviewRank project config. Stage 0: nothing has been downloaded or modeled.
+project: reviewrank
+stage: 0
+seed: 42
+
+dataset:
+  name: Amazon Reviews 2023 (McAuley Lab)
+  hf_repo: McAuley-Lab/Amazon-Reviews-2023
+  development_category: Health_and_Personal_Care
+  file: raw/review_categories/Health_and_Personal_Care.jsonl
+  citation: "Hou et al., Bridging Language and Items for Retrieval and Recommendation, ACL 2024"
+  license_note: "Amazon terms apply. NOT yet verified at source; do not publish raw review text."
+  fields: [asin, parent_asin, user_id, rating, title, text, images, timestamp, helpful_vote, verified_purchase]
+
+# Columns whose name contains any of these substrings must never be model inputs.
+# Name checks are a tripwire, not proof: Stage 4 adds as-of tests on values.
+forbidden_feature_substrings: [helpful, vote]
+
+# Fields allowed as features only if computed as of posting time.
+as_of_only_fields: [rating, parent_asin, user_id]
